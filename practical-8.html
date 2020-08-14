@@ -7,13 +7,41 @@
         *{
             margin: 0;
             padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
         .container>.header>ul{
             background: gray;
         }
         .container>.header>ul>li{
             list-style: none;
-            display: inline-block;
+            display: inline-flex;
+            width: 15%;
+        }
+        .container>.header>ul>li>a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 15px;
+            margin: 12px auto;
+            text-align: center;
+            transition: all .5s;
+        }
+        .container>.header>ul>li>a:hover {
+            color: black;
+            background: white;
+        }
+        .container>.banner>.image>img{
+            height: 100vh;
+            width: 98%;
+            margin: 2% 1% 0 1%;
+        }
+        .container>.banner>.image-content{
+            font-size: 60px;
+            color: white;
+            position: absolute;
+            top: 120px;
+            left: 25px;
         }
     </style>
 </head>
@@ -25,11 +53,15 @@
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT US</a></li>
             <li><a href="#team">TEAM</a></li>
+            <li><a href="#techno">TECHNOLOGIES</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     </div>
     <a name="home" class="banner">
-        <img src="images/banner.jpg">
+        <div class="image">
+            <img src="images/banner.jpg">
+        </div>
+        <div class="image-content">Practical-8</div>
     </a>
     <a name="team" class="section">Team Members</a>
     <div class="section-1">
@@ -63,7 +95,7 @@
             </div>
         </div>
     </div>
-    <div class="section">Technologies Used</div>
+    <a name="techno" class="section">Technologies Used</a>
     <div class="section-3">
         <div class="rect"></div>
         <div class="rect"></div>
