@@ -10,14 +10,18 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         .container>.header>ul{
+            position: fixed;
+            top: 0;
             background: gray;
+            width: 100%;
+            z-index: 10;
         }
         .container>.header>ul>li{
             list-style: none;
             display: inline-flex;
-            width: 15%;
         }
         .container>.header>ul>li>a{
+            width: 100%;
             color: white;
             text-decoration: none;
             font-size: 20px;
@@ -34,7 +38,7 @@
         .container>.banner>.image>img{
             height: 100vh;
             width: 98%;
-            margin: 2% 1% 0 1%;
+            margin: 7% 1% 0 1%;
         }
         .container>.banner>.image-content{
             font-size: 60px;
@@ -42,9 +46,10 @@
             position: absolute;
             top: 120px;
             left: 25px;
+            z-index: 0;
         }
         .section{
-            margin: 1% 0 1% 0;
+            margin: 5% 0% 1% 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -69,50 +74,100 @@
         <div class="image">
             <img src="images/banner.jpg">
         </div>
-        <div class="image-content">Practical-8</div>
+        <section class="image-content">Practical - 8</section>
     </a>
     <a name="team" class="section">Team Members</a>
     <div class="section-1">
-        <div class="circle1">
-            <img src="images/logo-1.png">
+        <div class="circle">
+            <img style="margin:0 0% 0 55%" src="images/logo-1.png">
         </div>
         <div class="circle">
-            <img src="images/logo-2.png">
+            <img style="margin:0 0% 0 110%" src="images/logo-2.png">
         </div>
         <div class="circle">
-            <img src="images/logo-3.png">
+            <img style="margin:0 0% 0 165%" src="images/logo-3.png">
         </div>
         <div class="circle">
-            <img src="images/logo-4.png">
+            <img style="margin:0 0% 0 220%" src="images/logo-4.png">
         </div>
     </div>
     <a name="about" class="section">About Us</a>
     <div class="section-2">
         <div class="Main-content">
-            <div>Main Content</div>
+            <h2>About Projects</h2>
+            <p style="padding-top:20px;font-size: 20px;word-spacing: 5px;">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            </p>
         </div>
         <div class="artical">
-            <div class="recta">
+            <div class="recta1">
                 <img src="images/project-1.jpg">
             </div>
             <div class="recta">
                 <img src="images/project-2.jpeg">
             </div>
-            <div class="rect1">
+            <div class="recta2">
                 <img src="images/project-3.jpg">
             </div>
         </div>
     </div>
     <a name="techno" class="section">Technologies Used</a>
     <div class="section-3">
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
+        <div class="box">
+            <div class="html-box">
+                <img style="height: 200px" src="images/html.png" alt="html image">
+                <div style="font-size: 20px;font-weight: 600;text-align: center">Introduction to HTML</div>
+                <p style="padding: 20px;font-size: 18px;text-align: justify;
+            margin-top: -10px;margin-bottom:0;font-family: 'Roboto Slab', serif;font-weight: 400">Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link available on a webpage is called Hypertext.
+                    As its name suggests, HTML is a Markup Language which means you use HTML to simply "mark-up" a text document.
+                </p>
+                <a href="html_content.html">Read more</a>
+            </div>
+
+            <div class="html-box">
+                <img style="height: 200px" src="images/css.jpg" alt="css image">
+                <div style="font-size: 20px;font-weight: 600;text-align: center">Introduction to CSS</div>
+                <p style="padding: 20px;font-size: 18px;text-align: justify;
+            margin-top: -10px;margin-bottom:0;font-family: 'Roboto Slab', serif;font-weight: 400">CSS is short for Cascading Style Sheets, and is the preferred way for setting the look and feel of a website. Cascading Style Sheets (CSS) is a markup language responsible for how your web pages will look like. It controls the colors, fonts, and layouts of your website elements.
+                </p>
+                <a href="css.html">Read more</a>
+            </div>
+
+            <div class="html-box">
+                <img style="height: 180px" src="images/javascript.jpg" alt="html image">
+                <div style="font-size: 20px;font-weight: 600;text-align: center">Introduction to JavaScript</div>
+                <p style="padding: 20px;font-size: 18px;text-align: justify;
+            margin-top: -10px;margin-bottom:0;font-family: 'Roboto Slab', serif;font-weight: 400">It is a scripting language
+                    It is an OOP (object-oriented programming) language
+                    Static typing feature is not available
+                    Static typing feature is present; it is a light-weight
+                    No support for modules is present in JavaScript
+                    TypeScript supports modules in the development process
+                    Interface is not present.</p>
+                <a href="javaScript.html">Read more</a>
+            </div>
+
+            <div class="html-box">
+                <img style="height: 200px" src="images/bootstrap.png" alt="html image">
+                <div style="font-size: 20px;font-weight: 600;text-align: center">Introduction to BOOTSTRAP</div>
+                <p style="padding: 20px;font-size: 18px;text-align: justify;
+            margin-top: -10px;margin-bottom:0;font-family: 'Roboto Slab', serif;font-weight: 400">Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+                </p>
+                <a href="bootstrap.html">Read more</a>
+            </div>
+        </div>
     </div>
     <a name="contact" class="section">Contact</a>
-    <div class="footer"></div>
-    <a href="#top">Back to top</a>
+    <div class="footer">
+        <div class="top1">
+            <div>Website Template For Practical-8 &copy; <a href="index.html">Practical</a></div>
+            <a class="top" href="#top">Back to top</a>
+        </div>
+    </div>
 </div>
 </body>
 </html>
