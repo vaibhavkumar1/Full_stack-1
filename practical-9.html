@@ -1,1755 +1,1025 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8"/>
-
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <title>Practical-9</title>
-    * {
 
-    padding: 0;
-
-    margin: 0;
-
-    box-sizing: border-box;
-
-    font-family: 'Montserrat Alternates', sans-serif;
-
-    }
-
-
-
-    /*
-
-    --Resolve Position Fixed Issue--
-
-    &
-
-    ----------Smooth Scroll ------
-
-    */
-
-
-
-    html {
-
-    scroll-padding-top: 70px;
-
-    scroll-behavior: smooth;
-
-    }
-
-
-
-    #container {
-
-    width: 100%;
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    }
-
-
-
-    /* ------Header Container-------- */
-
-
-
-    #header {
-
-    background-color: grey;
-
-    width: 100%;
-
-    height: 70px;
-
-    max-width: 1200px;
-
-    position: fixed;
-
-    top: 0;
-
-    height: 70px;
-
-    }
-
-
-
-    /* Navigation Menu  */
-
-    .menu {
-
-    list-style: none;
-
-    float: right;
-
-    padding: 0 20px;
-
-    }
-
-
-
-    .menu li {
-
-    display: inline-block;
-
-    line-height: 70px;
-
-    }
-
-
-
-    .menu li a {
-
-    transition: 0.4s;
-
-    display: block;
-
-    text-decoration: none;
-
-    color: white;
-
-    padding: 0px 20px;
-
-    font-size: 20px;
-
-    text-transform: uppercase;
-
-    }
-
-
-
-    .menu li a:hover {
-
-    color: black;
-
-    background-color: white;
-
-    }
-
-
-
-    .show-btn,
-
-    .hide-btn,
-
-    #chk {
-
-    font-size: 30px;
-
-    line-height: 70px;
-
-    color: white;
-
-    display: none;
-
-    float: right;
-
-    padding-right: 20px;
-
-    }
-
-
-
-    /* ------------------Banner ------------- */
-
-
-
-    #banner {
-
-    width: 100%;
-
-    margin-top: 90px;
-
-    height: 680px;
-
-    margin-bottom: 15px;
-
-    display: flex;
-
-    font-size: 40px;
-
-    color: white;
-
-    }
-
-
-
-    #banner {
-
-    background-image: url(https://imgur.com/qIxEnMl.jpg);
-
-    background-size: cover;
-
-    background-position: center;
-
-    }
-
-
-
-    #banner h2 {
-
-    margin: 20px 20px;
-
-    color: #fff;
-
-    }
-
-
-
-    /* ------- Team Members ----- */
-
-
-
-    #circle-container {
-
-    width: 100%;
-
-    margin: 15px auto;
-
-    }
-
-
-
-    #circle-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    .circle img {
-
-    height: 250px;
-
-    width: 250px;
-
-    border-radius: 50%;
-
-    background-color: goldenrod;
-
-    float: left;
-
-    margin-left: 40px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 30px;
-
-    }
-
-
-
-    /* -------------About Us-------------- */
-
-    #sec2-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    #left-side {
-
-    width: 50%;
-
-    height: 550px;
-
-    background-color: gray;
-
-    float: left;
-
-    color: #fff;
-
-    }
-
-
-
-    #left-p > h2 {
-
-    text-align: left;
-
-    margin: 10px 5px;
-
-    }
-
-
-
-    #left-p > p {
-
-    font-size: 20px;
-
-    padding: 10px;
-
-    text-align: justify;
-
-    line-height: 28px;
-
-    }
-
-
-
-    #right-side {
-
-    width: 48%;
-
-    height: 550px;
-
-    float: right;
-
-    }
-
-
-
-    .artical {
-
-    height: 31%;
-
-    margin-bottom: 20px;
-
-    background-color: chocolate;
-
-    display: flex;
-
-    justify-content: center;
-
-    font-size: 20px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: black;
-
-    overflow: hidden;
-
-    }
-
-
-
-    #p1 {
-
-    background-image: url(https://imgur.com/JyMz0CR.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p2 {
-
-    background-image: url(https://imgur.com/GFLWoXM.jpeg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p3 {
-
-    background-image: url(https://imgur.com/uzmZqZA.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    /* --------- Technologies Used------------ */
-
-    #grid-container {
-
-    width: 100%;
-
-    margin: 15px auto;
-
-    }
-
-
-
-    #grid-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    .grid {
-
-    width: 20%;
-
-    float: left;
-
-    margin-left: 50px;
-
-    background-color: lightgrey;
-
-    border-radius: 8px;
-
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-
-    }
-
-
-
-    .grid > img {
-
-    width: 100%;
-
-    margin-bottom: 10px;
-
-    }
-
-
-
-    .grid > h4 {
-
-    margin: 0px 10px;
-
-    text-align: center;
-
-    }
-
-
-
-    .grid > p {
-
-    margin: 10px;
-
-    font-size: 15px;
-
-    text-align: justify;
-
-    line-height: 25px;
-
-    color: white;
-
-    }
-
-
-
-    .grid > a {
-
-    display: block;
-
-    margin: 0 auto;
-
-    text-align: center;
-
-    color: #fff;
-
-    background-color: red;
-
-    text-decoration: none;
-
-    padding: 10px;
-
-    border-radius: 8px;
-
-    }
-
-
-
-    h1 {
-
-    color: black;
-
-    font-size: 40px;
-
-    text-align: center;
-
-    padding: 25px 0px;
-
-    }
-
-
-
-    .grid > a:hover {
-
-    background-color: blue;
-
-    }
-
-
-
-    /* -------Footer Section ------- */
-
-    #footer {
-
-    background-color: plum;
-
-    height: 100px;
-
-    }
-
-
-
-    #footer > p {
-
-    font-size: 16px;
-
-    color: black;
-
-    text-align: center;
-
-    padding: 20px;
-
-    }
-
-
-
-    /* 1. First Break-point */
-
-    /* 801px - 1199px */
-
-
-
-    @media (min-width: 801px) and (max-width: 1199px) {
-
-    .menu {
-
-    list-style: none;
-
-    float: right;
-
-    }
-
-
-
-    .menu li {
-
-    line-height: 70px;
-
-    display: inline-block;
-
-    }
-
-
-
-    .menu li a {
-
-    display: block;
-
-    text-decoration: none;
-
-    color: white;
-
-    padding: 0px 20px;
-
-    font-size: 20px;
-
-    text-transform: uppercase;
-
-    }
-
-
-
-    .menu li a:hover {
-
-    color: black;
-
-    background-color: white;
-
-    }
-
-
-
-    html {
-
-    scroll-padding-top: 70px;
-
-    scroll-behavior: smooth;
-
-    }
-
-
-
-    #container {
-
-    width: 100%;
-
-    }
-
-
-
-    .show-btn,
-
-    .hide-btn,
-
-    #chk {
-
-    font-size: 30px;
-
-    line-height: 70px;
-
-    color: white;
-
-    display: none;
-
-    float: right;
-
-    padding-right: 20px;
-
-    }
-
-
-
-    /* ------Header Container-------- */
-
-    #header {
-
-    width: 100%;
-
-    background-color: grey;
-
-    position: fixed;
-
-    top: 0;
-
-    height: 70px;
-
-    }
-
-
-
-    /* ------------------Banner ------------- */
-
-    #banner {
-
-    width: 100%;
-
-    margin-top: 90px;
-
-    height: 680px;
-
-    margin-bottom: 15px;
-
-    display: flex;
-
-    font-size: 40px;
-
-    color: white;
-
-    }
-
-
-
-    #banner {
-
-    background-image: url(https://imgur.com/qIxEnMl.jpg);
-
-    background-size: cover;
-
-    background-position: center;
-
-    }
-
-
-
-    #banner h2 {
-
-    margin: 20px 20px;
-
-    color: #fff;
-
-    }
-
-
-
-    /* ------- Team Members ----- */
-
-    #circle-container {
-
-    width: 100%;
-
-    }
-
-
-
-    #circle-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    .circle img {
-
-    height: 250px;
-
-    width: 250px;
-
-    border-radius: 50%;
-
-    background-color: goldenrod;
-
-    float: left;
-
-    margin-left: 15%;
-
-    margin-bottom: 20px;
-
-    }
-
-
-
-    /* -------------About Us-------------- */
-
-    #sec2-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    #left-side {
-
-    width: 50%;
-
-    height: 550px;
-
-    background-color: gray;
-
-    float: left;
-
-    color: #fff;
-
-    }
-
-
-
-    #left-p > h2 {
-
-    text-align: left;
-
-    margin: 10px 5px;
-
-    }
-
-
-
-    #left-p > p {
-
-    font-size: 20px;
-
-    padding: 10px;
-
-    text-align: justify;
-
-    line-height: 28px;
-
-    }
-
-
-
-    #right-side {
-
-    width: 48%;
-
-    height: 550px;
-
-    float: right;
-
-    }
-
-
-
-    .artical {
-
-    height: 31%;
-
-    margin-bottom: 20px;
-
-    background-color: chocolate;
-
-    display: flex;
-
-    justify-content: center;
-
-    font-size: 20px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: black;
-
-    overflow: hidden;
-
-    }
-
-
-
-    #p1 {
-
-    background-image: url(https://imgur.com/JyMz0CR.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p2 {
-
-    background-image: url(https://imgur.com/GFLWoXM.jpeg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p3 {
-
-    background-image: url(https://imgur.com/uzmZqZA.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    /* --------- Technologies Used------------ */
-
-    #grid-container {
-
-    width: 100%;
-
-    margin: 15px auto;
-
-    }
-
-
-
-    #grid-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    .grid {
-
-    width: 40%;
-
-    float: left;
-
-    margin-left: 65px;
-
-    margin-bottom: 20px;
-
-    background-color: lightgrey;
-
-    border-radius: 8px;
-
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-
-    }
-
-
-
-    .grid > img {
-
-    width: 100%;
-
-    margin-bottom: 10px;
-
-    padding: 20px;
-
-    }
-
-
-
-    .grid > h4 {
-
-    margin: 0px 10px;
-
-    text-align: center;
-
-    }
-
-
-
-    .grid > p {
-
-    margin: 10px;
-
-    font-size: 20px;
-
-    text-align: justify;
-
-    line-height: 30px;
-
-    color: white;
-
-    }
-
-
-
-    .grid > a {
-
-    display: block;
-
-    margin: 0 auto;
-
-    text-align: center;
-
-    color: #fff;
-
-    background-color: red;
-
-    text-decoration: none;
-
-    padding: 10px;
-
-    border-radius: 8px;
-
-    }
-
-
-
-    h1 {
-
-    color: black;
-
-    font-size: 40px;
-
-    text-align: center;
-
-    padding: 25px 0px;
-
-    }
-
-
-
-    .grid > a:hover {
-
-    background-color: blue;
-
-    }
-
-
-
-    /* -------Footer Section ------- */
-
-    #footer {
-
-    background-color: plum;
-
-    height: 100px;
-
-    }
-
-
-
-    #footer > p {
-
-    font-size: 16px;
-
-    color: black;
-
-    text-align: center;
-
-    padding: 20px;
-
-    }
-
-    }
-
-
-
-    /* 2. Second Break-point */
-
-
-
-    @media (max-width: 800px) {
-
-    #header {
-
-    width: 100%;
-
-    background-color: grey;
-
-    position: fixed;
-
-    top: 0;
-
-    height: 70px;
-
-    }
-
-
-
-    .show-btn {
-
-    display: block;
-
-    }
-
-
-
-    .menu {
-
-    position: fixed;
-
-    top: 0;
-
-    right: -100%;
-
-    width: 100%;
-
-    background-color: #333;
-
-    text-align: center;
-
-    padding: 80px 0px;
-
-    line-height: normal;
-
-    transition: 0.7s;
-
-    }
-
-
-
-    .menu li {
-
-    display: block;
-
-    }
-
-
-
-    .manu li a {
-
-    display: block;
-
-    }
-
-
-
-    #chk:checked ~ .menu {
-
-    right: 0;
-
-    }
-
-
-
-    .hide-btn {
-
-    display: block;
-
-    position: absolute;
-
-    right: 20px;
-
-    top: 10px;
-
-    }
-
-
-
-    #banner {
-
-    width: 100%;
-
-    height: 350px;
-
-    margin-bottom: 15px;
-
-    display: flex;
-
-    font-size: 30px;
-
-    color: white;
-
-    margin-top: 90px;
-
-    }
-
-
-
-    #banner h2 {
-
-    margin: 10px 20px;
-
-    color: #fff;
-
-    }
-
-
-
-    #circle-container {
-
-    width: 100%;
-
-    }
-
-
-
-    #circle-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    .circle img {
-
-    height: 250px;
-
-    width: 250px;
-
-    border-radius: 50%;
-
-    float: left;
-
-    margin-left: 10%;
-
-    margin-bottom: 20px;
-
-    }
-
-
-
-    #left-side {
-
-    width: 100%;
-
-    height: 200px;
-
-    background-color: gray;
-
-    color: #fff;
-
-    margin-bottom: 20px;
-
-    }
-
-
-
-    #left-p > h2 {
-
-    text-align: left;
-
-    margin: 5px 5px;
-
-    }
-
-
-
-    #left-p > p {
-
-    font-size: 20px;
-
-    padding: 10px;
-
-    text-align: justify;
-
-    line-height: 28px;
-
-    }
-
-
-
-    #right-side {
-
-    width: 100%;
-
-    height: 400px;
-
-    }
-
-
-
-    .artical {
-
-    height: 31%;
-
-    margin-bottom: 20px;
-
-    background-color: chocolate;
-
-    display: flex;
-
-    justify-content: center;
-
-    font-size: 16px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: black;
-
-    overflow: hidden;
-
-    }
-
-
-
-    #p1 {
-
-    background-image: url(https://imgur.com/JyMz0CR.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p2 {
-
-    background-image: url(https://imgur.com/GFLWoXM.jpeg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p3 {
-
-    background-image: url(https://imgur.com/uzmZqZA.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #grid-container {
-
-    width: 100%;
-
-    margin: 15px auto;
-
-    }
-
-
-
-    #grid-container::after {
-
-    content: '';
-
-    display: block;
-
-    clear: both;
-
-    }
-
-
-
-    .grid {
-
-    width: 40%;
-
-    float: left;
-
-    margin-left: 50px;
-
-    background-color: lightgrey;
-
-    border-radius: 8px;
-
-    margin-bottom: 20px;
-
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-
-    }
-
-
-
-    .grid > img {
-
-    width: 100%;
-
-    margin-bottom: 10px;
-
-    }
-
-
-
-    .grid > h4 {
-
-    margin: 0px 10px;
-
-    text-align: center;
-
-    }
-
-
-
-    .grid > p {
-
-    margin: 10px;
-
-    font-size: 15px;
-
-    text-align: justify;
-
-    line-height: 25px;
-
-    color: white;
-
-    }
-
-
-
-    .grid > a {
-
-    display: block;
-
-    margin: 0 auto;
-
-    text-align: center;
-
-    color: #fff;
-
-    background-color: red;
-
-    text-decoration: none;
-
-    padding: 10px;
-
-    border-radius: 8px;
-
-    }
-
-
-
-    h1 {
-
-    color: black;
-
-    font-size: 40px;
-
-    text-align: center;
-
-    padding: 25px 0px;
-
-    }
-
-
-
-    /* 3. Third Break-point */
-
-    @media (max-width: 625px) {
-
-    /* Set container to min-width of 320px */
-
-    #container {
-
-    min-width: 320px;
-
-    }
-
-
-
-    .show-btn {
-
-    display: block;
-
-    }
-
-
-
-    .menu {
-
-    position: fixed;
-
-    top: 0;
-
-    right: -100%;
-
-    width: 100%;
-
-    background-color: #333;
-
-    text-align: center;
-
-    padding: 80px 0px;
-
-    line-height: normal;
-
-    transition: 0.7s;
-
-    }
-
-
-
-    .menu li {
-
-    display: block;
-
-    }
-
-
-
-    .manu li a {
-
-    display: block;
-
-    }
-
-
-
-    #chk:checked ~ .menu {
-
-    right: 0;
-
-    }
-
-
-
-    .hide-btn {
-
-    display: block;
-
-    position: absolute;
-
-    right: 20px;
-
-    top: 10px;
-
-    }
-
-
-
-    #banner {
-
-    width: 100%;
-
-    height: 250px;
-
-    margin-bottom: 15px;
-
-    color: white;
-
-    margin-top: 90px;
-
-    }
-
-
-
-    #banner h2 {
-
-    margin: 10px 20px;
-
-    color: #fff;
-
-    font-size: 20px;
-
-    }
-
-
-
-    #circle-container {
-
-    width: 90%;
-
-    margin-left: 10%;
-
-    }
-
-
-
-    .circle img {
-
-    height: 70%;
-
-    width: 70%;
-
-
-
-    border-radius: 50%;
-
-    margin-bottom: 20px;
-
-    }
-
-
-
-    #left-side {
-
-    width: 100%;
-
-    height: 200px;
-
-    background-color: gray;
-
-    color: #fff;
-
-    margin-bottom: 20px;
-
-    }
-
-
-
-    #left-p > h2 {
-
-    text-align: left;
-
-    margin: 5px 5px;
-
-    }
-
-
-
-    #left-p > p {
-
-    font-size: 20px;
-
-    padding: 10px;
-
-    text-align: justify;
-
-    line-height: 28px;
-
-    }
-
-
-
-    #right-side {
-
-    width: 100%;
-
-    height: 400px;
-
-    }
-
-
-
-    .artical {
-
-    box-sizing: border-box;
-
-    height: 31%;
-
-    margin-bottom: 20px;
-
-    display: flex;
-
-    justify-content: center;
-
-    font-size: 16px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: black;
-
-    overflow: hidden;
-
-    }
-
-
-
-    #p1 {
-
-    background-image: url(https://imgur.com/JyMz0CR.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p2 {
-
-    background-image: url(https://imgur.com/GFLWoXM.jpeg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #p3 {
-
-    background-image: url(https://imgur.com/uzmZqZA.jpg);
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    }
-
-
-
-    #grid-container {
-
-    width: 100%;
-
-    box-sizing: border-box;
-
-    }
-
-
-
-    .grid {
-
-    margin-left: 20px;
-
-    width: 90%;
-
-    background-color: lightgrey;
-
-    border-radius: 8px;
-
-    margin-bottom: 20px;
-
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-
-    max-height: 500px;
-
-    }
-
-
-
-    .grid > img {
-
-    width: 100%;
-
-    margin-bottom: 10px;
-
-    padding: 20px;
-
-    }
-
-
-
-    .grid > h4 {
-
-    margin: 0px 10px;
-
-    text-align: center;
-
-    }
-
-
-
-    .grid > p {
-
-    margin: 10px;
-
-    font-size: 15px;
-
-    text-align: justify;
-
-    line-height: 25px;
-
-    color: white;
-
-    }
-
-
-
-    .grid > a {
-
-    display: block;
-
-    margin: 0 auto;
-
-    text-align: center;
-
-    color: #fff;
-
-    background-color: red;
-
-    text-decoration: none;
-
-    padding: 10px;
-
-    border-radius: 8px;
-
-    }
-
-
-
-    h1 {
-
-    color: black;
-
-    font-size: 20px;
-
-    text-align: center;
-
-    padding-top: 25px;
-
-    padding-bottom: 15px;
-
-    }
-
-    }
-
-    }
-
+    <style>
+        /* Reset all Margins & Padding */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat Alternates', sans-serif;
+        }
+
+        /*
+          --Resolve Position Fixed Issue--
+                          &
+            ----------Smooth Scroll ------
+          */
+
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+        }
+
+        #container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ------Header Container-------- */
+
+        #header {
+            background-color: grey;
+            width: 100%;
+            height: 70px;
+            max-width: 1200px;
+            position: fixed;
+            top: 0;
+            height: 70px;
+        }
+
+        /* Navigation Menu  */
+        .menu {
+            list-style: none;
+            float: right;
+            padding: 0 20px;
+        }
+
+        .menu li {
+            display: inline-block;
+            line-height: 70px;
+        }
+
+        .menu li a {
+            transition: 0.4s;
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 0px 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .menu li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .show-btn,
+        .hide-btn,
+        #chk {
+            font-size: 30px;
+            line-height: 70px;
+            color: white;
+            display: none;
+            float: right;
+            padding-right: 20px;
+        }
+
+        /* ------------------Banner ------------- */
+
+        #banner {
+            width: 100%;
+            margin-top: 90px;
+            height: 680px;
+            margin-bottom: 15px;
+            display: flex;
+            font-size: 40px;
+            color: white;
+        }
+
+        #banner {
+            background-image: url(https://imgur.com/qIxEnMl.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner h2 {
+            margin: 20px 20px;
+            color: #fff;
+        }
+
+        /* ------- Team Members ----- */
+
+        #circle-container {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #circle-container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .circle img {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: goldenrod;
+            float: left;
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        /* -------------About Us-------------- */
+        #sec2-container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #left-side {
+            width: 50%;
+            height: 550px;
+            background-color: gray;
+            float: left;
+            color: #fff;
+        }
+
+        #left-p > h2 {
+            text-align: left;
+            margin: 10px 5px;
+        }
+
+        #left-p > p {
+            font-size: 20px;
+            padding: 10px;
+            text-align: justify;
+            line-height: 28px;
+        }
+
+        #right-side {
+            width: 48%;
+            height: 550px;
+            float: right;
+        }
+
+        .artical {
+            height: 31%;
+            margin-bottom: 20px;
+            background-color: chocolate;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            overflow: hidden;
+        }
+
+        #p1 {
+            background-image: url(https://imgur.com/JyMz0CR.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p2 {
+            background-image: url(https://imgur.com/GFLWoXM.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p3 {
+            background-image: url(https://imgur.com/uzmZqZA.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* --------- Technologies Used------------ */
+        #grid-container {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #grid-container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .grid {
+            width: 20%;
+            float: left;
+            margin-left: 50px;
+            background-color: lightgrey;
+            border-radius: 8px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .grid > img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .grid > h4 {
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        .grid > p {
+            margin: 10px;
+            font-size: 15px;
+            text-align: justify;
+            line-height: 25px;
+            color: white;
+        }
+
+        .grid > a {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+            padding: 25px 0px;
+        }
+
+        .grid > a:hover {
+            background-color: blue;
+        }
+
+        /* -------Footer Section ------- */
+        #footer {
+            background-color: plum;
+            height: 100px;
+        }
+
+        #footer > p {
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 1. First Break-point */
+        /* 801px - 1199px */
+
+        @media (min-width: 801px) and (max-width: 1199px) {
+            .menu {
+                list-style: none;
+                float: right;
+            }
+
+            .menu li {
+                line-height: 70px;
+                display: inline-block;
+            }
+
+            .menu li a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                padding: 0px 20px;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+
+            .menu li a:hover {
+                color: black;
+                background-color: white;
+            }
+
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+
+            #container {
+                width: 100%;
+            }
+
+            .show-btn,
+            .hide-btn,
+            #chk {
+                font-size: 30px;
+                line-height: 70px;
+                color: white;
+                display: none;
+                float: right;
+                padding-right: 20px;
+            }
+
+            /* ------Header Container-------- */
+            #header {
+                width: 100%;
+                background-color: grey;
+                position: fixed;
+                top: 0;
+                height: 70px;
+            }
+
+            /* ------------------Banner ------------- */
+            #banner {
+                width: 100%;
+                margin-top: 90px;
+                height: 680px;
+                margin-bottom: 15px;
+                display: flex;
+                font-size: 40px;
+                color: white;
+            }
+
+            #banner {
+                background-image: url(https://imgur.com/qIxEnMl.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            #banner h2 {
+                margin: 20px 20px;
+                color: #fff;
+            }
+
+            /* ------- Team Members ----- */
+            #circle-container {
+                width: 100%;
+            }
+
+            #circle-container::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .circle img {
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                background-color: goldenrod;
+                float: left;
+                margin-left: 15%;
+                margin-bottom: 20px;
+            }
+
+            /* -------------About Us-------------- */
+            #sec2-container::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            #left-side {
+                width: 50%;
+                height: 550px;
+                background-color: gray;
+                float: left;
+                color: #fff;
+            }
+
+            #left-p > h2 {
+                text-align: left;
+                margin: 10px 5px;
+            }
+
+            #left-p > p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+
+            #right-side {
+                width: 48%;
+                height: 550px;
+                float: right;
+            }
+
+            .artical {
+                height: 31%;
+                margin-bottom: 20px;
+                background-color: chocolate;
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+                overflow: hidden;
+            }
+
+            #p1 {
+                background-image: url(https://imgur.com/JyMz0CR.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #p2 {
+                background-image: url(https://imgur.com/GFLWoXM.jpeg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #p3 {
+                background-image: url(https://imgur.com/uzmZqZA.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            /* --------- Technologies Used------------ */
+            #grid-container {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            #grid-container::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .grid {
+                width: 40%;
+                float: left;
+                margin-left: 65px;
+                margin-bottom: 20px;
+                background-color: lightgrey;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .grid > img {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 20px;
+            }
+
+            .grid > h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+
+            .grid > p {
+                margin: 10px;
+                font-size: 20px;
+                text-align: justify;
+                line-height: 30px;
+                color: white;
+            }
+
+            .grid > a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+
+            .grid > a:hover {
+                background-color: blue;
+            }
+
+            /* -------Footer Section ------- */
+            #footer {
+                background-color: plum;
+                height: 100px;
+            }
+
+            #footer > p {
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        /* 2. Second Break-point */
+
+        @media (max-width: 800px) {
+            #header {
+                width: 100%;
+                background-color: grey;
+                position: fixed;
+                top: 0;
+                height: 70px;
+            }
+
+            .show-btn {
+                display: block;
+            }
+
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+
+            .menu li {
+                display: block;
+            }
+
+            .manu li a {
+                display: block;
+            }
+
+            #chk:checked ~ .menu {
+                right: 0;
+            }
+
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+            #banner {
+                width: 100%;
+                height: 350px;
+                margin-bottom: 15px;
+                display: flex;
+                font-size: 30px;
+                color: white;
+                margin-top: 90px;
+            }
+
+            #banner h2 {
+                margin: 10px 20px;
+                color: #fff;
+            }
+
+            #circle-container {
+                width: 100%;
+            }
+
+            #circle-container::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .circle img {
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                float: left;
+                margin-left: 10%;
+                margin-bottom: 20px;
+            }
+
+            #left-side {
+                width: 100%;
+                height: 200px;
+                background-color: gray;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            #left-p > h2 {
+                text-align: left;
+                margin: 5px 5px;
+            }
+
+            #left-p > p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+
+            #right-side {
+                width: 100%;
+                height: 400px;
+            }
+
+            .artical {
+                height: 31%;
+                margin-bottom: 20px;
+                background-color: chocolate;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+                overflow: hidden;
+            }
+
+            #p1 {
+                background-image: url(https://imgur.com/JyMz0CR.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #p2 {
+                background-image: url(https://imgur.com/GFLWoXM.jpeg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #p3 {
+                background-image: url(https://imgur.com/uzmZqZA.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #grid-container {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            #grid-container::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .grid {
+                width: 40%;
+                float: left;
+                margin-left: 50px;
+                background-color: lightgrey;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .grid > img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .grid > h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+
+            .grid > p {
+                margin: 10px;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                color: white;
+            }
+
+            .grid > a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+
+            /* 3. Third Break-point */
+            @media (max-width: 625px) {
+                /* Set container to min-width of 320px */
+                #container {
+                    min-width: 320px;
+                }
+
+                .show-btn {
+                    display: block;
+                }
+
+                .menu {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 100%;
+                    background-color: #333;
+                    text-align: center;
+                    padding: 80px 0px;
+                    line-height: normal;
+                    transition: 0.7s;
+                }
+
+                .menu li {
+                    display: block;
+                }
+
+                .manu li a {
+                    display: block;
+                }
+
+                #chk:checked ~ .menu {
+                    right: 0;
+                }
+
+                .hide-btn {
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                }
+
+                #banner {
+                    width: 100%;
+                    height: 250px;
+                    margin-bottom: 15px;
+                    color: white;
+                    margin-top: 90px;
+                }
+
+                #banner h2 {
+                    margin: 10px 20px;
+                    color: #fff;
+                    font-size: 20px;
+                }
+
+                #circle-container {
+                    width: 90%;
+                    margin-left: 10%;
+                }
+
+                .circle img {
+                    height: 70%;
+                    width: 70%;
+
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+
+                #left-side {
+                    width: 100%;
+                    height: 200px;
+                    background-color: gray;
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+
+                #left-p > h2 {
+                    text-align: left;
+                    margin: 5px 5px;
+                }
+
+                #left-p > p {
+                    font-size: 20px;
+                    padding: 10px;
+                    text-align: justify;
+                    line-height: 28px;
+                }
+
+                #right-side {
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .artical {
+                    box-sizing: border-box;
+                    height: 31%;
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 16px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: black;
+                    overflow: hidden;
+                }
+
+                #p1 {
+                    background-image: url(https://imgur.com/JyMz0CR.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p2 {
+                    background-image: url(https://imgur.com/GFLWoXM.jpeg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p3 {
+                    background-image: url(https://imgur.com/uzmZqZA.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #grid-container {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .grid {
+                    margin-left: 20px;
+                    width: 90%;
+                    background-color: lightgrey;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+                    max-height: 500px;
+                }
+
+                .grid > img {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 20px;
+                }
+
+                .grid > h4 {
+                    margin: 0px 10px;
+                    text-align: center;
+                }
+
+                .grid > p {
+                    margin: 10px;
+                    font-size: 15px;
+                    text-align: justify;
+                    line-height: 25px;
+                    color: white;
+                }
+
+                .grid > a {
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                    color: #fff;
+                    background-color: red;
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+
+                h1 {
+                    color: black;
+                    font-size: 20px;
+                    text-align: center;
+                    padding-top: 25px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
     </style>
 </head>
-<body>
 
+<body>
+<div id="container">
+    <div id="header">
+        <input id="chk" type="checkbox"/>
+        <label class="show-btn" for="chk">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#circle-container">Team</a></li>
+            <li><a href="#Technologies">Technologies</a></li>
+            <li><a href="#contact">contact</a></li>
+
+            <label class="hide-btn" for="chk">
+                <i class="fa fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <a name="top"></a>
+
+    <div id="banner">
+        <h2>PRACTICAL - 9</h2>
+    </div>
+    <div id="circle-container">
+        <h1>Team Members</h1>
+        <div class="circle">
+            <img alt="" src="https://imgur.com/aFFF1uw.jpg"/>
+        </div>
+        <div class="circle">
+            <img alt="" src="https://imgur.com/dIAsZGb.png"/>
+        </div>
+        <div class="circle">
+            <img alt="" src="https://imgur.com/GIikFy7.png"/>
+        </div>
+        <div class="circle">
+            <img alt="" src="https://imgur.com/JvDB5AN.png"/>
+        </div>
+    </div>
+    <div id="sec2-container">
+        <a name="about"></a>
+        <h1>About Us</h1>
+        <div id="left-side">
+            <div class="left-content">
+                <div id="left-p">
+                    <h2>About Projects</h2>
+                    <p>
+                        temporibus similique sit tenetur quasi exercitationem! Repellat
+                        obcaecati quibusdam iste explicabo laborum veritatis velit
+                        accusantium animi dolorum nemo ut quam, quo cum in suscipit
+                        fugiat minima corrupti voluptates tempora alias aspernatur esse
+                        dolore iure? Libero iste quo nam sequi nulla, minima architecto
+                        est cum expedita omnis enim culpa reiciendis nesciunt quod
+                        deserunt, nostrum corporis tempore impedit veritatis ut
+                        perspiciatis rerum. Amet, harum pariatur. Quo dolorum
+                        necessitatibus eos beatae eveniet, earum cum blanditiis,
+                        accusamus vitae, nisi voluptas dignissimos modi quibusdam aut
+                        veniam deserunt accusantium possimus atque? Distinctio voluptas
+                        nemo, fuga laboriosam perspiciatis eum debitis nesciunt quidem
+                        iure ratione! Eaque ea eum maxime temporibus dolor nostrum, iure
+                        enim, vero in atque quod animi! Mollitia alias magnam nisi
+                        suscipit ab ducimus dolores provident. Distinctio veritatis
+                        quaerat explicabo fuga neque culpa facere suscipit vel, totam
+                        quasi!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="right-side">
+            <div class="artical" id="p1">
+                <h2>Project-1</h2>
+            </div>
+            <div class="artical" id="p2">
+                <h2>Project-2</h2>
+            </div>
+            <div class="artical" id="p3">
+                <h2>Project-3</h2>
+            </div>
+        </div>
+    </div>
+    <div id="grid-container">
+        <a name="Technologies"></a>
+        <h1>Technologies Used</h1>
+        <div class="grid">
+            <img alt="" src="https://imgur.com/joZlsqC.png"/>
+            <h4>Introduction to HTML</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                recusandae consequuntur!
+            </p>
+
+            <a href="p5-html.html">Read More</a>
+        </div>
+        <div class="grid">
+            <img alt="" src="https://imgur.com/8F89zk5.png"/>
+            <h4>Introduction to CSS</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                recusandae consequuntur!
+            </p>
+
+            <a href="p5-css.html">Read More</a>
+        </div>
+        <div class="grid">
+            <img alt="" src="https://imgur.com/YWiaReD.png"/>
+            <h4>Introduction to JavaScript</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                recusandae consequuntur!
+            </p>
+
+            <a href="p5-js.html">Read More</a>
+        </div>
+        <div class="grid">
+            <img alt="" src="https://imgur.com/L0JabFG.jpg"/>
+            <h4>Introduction to Bootstrap</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                recusandae consequuntur!
+            </p>
+
+            <a href="p5-bootstrap.html">Read More</a>
+        </div>
+    </div>
+    <a name="contact"></a>
+    <h1>Contact</h1>
+    <div id="footer">
+        <p>
+            Website Template for Practical-9 &copy;
+            <br/><br/>
+            <a href="#top">Back to top</a>
+        </p>
+    </div>
+</div>
 </body>
+
 </html>
