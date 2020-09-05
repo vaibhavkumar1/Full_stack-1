@@ -27,6 +27,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            margin-bottom: -10px;
         }
         .header>img{
             width: 70px;
@@ -37,6 +38,31 @@
             background: gray;
             color: white;
         }
+        .menu{
+            background: gray;
+            width: 20%;
+            margin-top: -10px;
+        }
+        .menu>input{
+            display: none;
+            z-index: -10;
+        }
+        .glyphicon{
+            font-size: 30px;
+            color: white;
+            background: gray;
+        }
+        .show-btn{
+            background: gray;
+            margin-left: 10px;
+        }
+        .hide-btn{
+            background: gray;
+            display: none;
+            margin-left: 10px;
+        }
+
+
 
     </style>
 
@@ -55,7 +81,7 @@
         <label for="chk" class="hide-btn">
             <i class="glyphicon glyphicon-remove"></i>
         </label>
-        <div class="menu">
+        <div class="menu-list">
             <li href="#">Home</li>
             <li href="#">About</li>
             <li href="#">Services</li>
