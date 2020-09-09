@@ -11,11 +11,71 @@
             margin: 0;
         }
         body{
-            background: whitesmoke;
+            background: rgba(0,0,0,.2);
             font-family: "Arial Rounded MT Bold",serif;
+            font-size: 20px;
         }
         table{
-            border: 1px solid blue;
+            border: 13px solid white;
+            width: 50%;
+            height: 90vh;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: 25%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        tr,td,th{
+            width: 150px;
+            border: 2px solid white;
+            padding: 13px;
+        }
+        thead>tr:first-child{
+            font-size: 32px;
+            background: white;
+        }
+        .fa-check{
+            font-size: 25px;
+            color: green;
+        }
+        .fa-times{
+            font-size: 25px;
+            color: red;
+        }
+        thead>tr:nth-child(2){
+            color: purple;
+            font-size: 30px;
+        }
+        tbody>tr{
+            font-weight: 600;
+        }
+        tbody>tr>td>a{
+            text-decoration: none;
+            border: 1px solid purple;
+            color: white;
+            padding: 10px;
+            background: purple;
+            margin: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        table>tr>td:nth-child(1){
+            background: skyblue;
+        }
+        .Basic{
+            background: #c1dcb7;
+        }
+        .Plush{
+            background: #bad6c8;
+        }
+        .Deluxe{
+            background: #bbd3dc;
+        }
+        .Pro{
+            background: #d5e4bc;
+        }
+        tbody>tr:nth-child(odd){
+            background: #bad6d4;
         }
 
     </style>
@@ -23,24 +83,22 @@
 <body>
 <div class="main-content">
     <table>
+        <colgroup class="Basic"></colgroup>
+        <colgroup class="Plush"></colgroup>
+        <colgroup class="Deluxe"></colgroup>
+        <colgroup class="Pro"></colgroup>
         <thead>
         <tr>
             <th colspan="4">SELECT YOUR PLAN</th>
         </tr>
         <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th><i class="fa fa-building" aria-hidden="true"></i>Basic</th>
+            <th><i class="fa fa-superpowers" aria-hidden="true"></i>Plush</th>
+            <th><i class="fa fa-telegram" aria-hidden="true"></i>Deluxe</th>
+            <th><i class="fa fa-tachometer" aria-hidden="true"></i>Pro</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Basic</td>
-            <td>Plush</td>
-            <td>Deluxe</td>
-            <td>Pro</td>
-        </tr>
         <tr>
             <td>Rs. 500/-</td>
             <td>Rs. 1500/-</td>
@@ -102,7 +160,7 @@
             <td><i class="fa fa-check" aria-hidden="true"></i></td>
         </tr>
         <tr>
-            <td><a href="#">Sign Up</a></td>
+            <td style="height: 40px"><a href="#">Sign Up</a></td>
             <td><a href="#">Sign Up</a></td>
             <td><a href="#">Sign Up</a></td>
             <td><a href="#">Sign Up</a></td>
