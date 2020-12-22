@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical - 16 </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(to right,skyblue,blue);
+            height: 100vh;
+            width: 100%;
+        }
+        .box1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 30px;
+
+        .heading{
+            font-size: 100px;
+            font-weight: bold;
+            color: black;
+        }
+        form .text,form .addbtn{
+            outline: none;
+            border: none;
+            background-color: white;
+            color: black;
+            margin-top: 20px;
+            font-size: 30px;
+            padding: 5px;
+        }
+        form .addbtn{
+            padding: 5px;
+            color: blue;
+        }
+        form .addbtn:hover{
+            background-color: cornflowerblue;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .todolist{
+            list-style: none;
+            min-width: 25%;
+        }
+        .todo{
+            margin: 5px;
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:15px ;
+        }
+        .todo-li{
+            font-size: 30px;
+            background-color: white;
+            flex: 1;
+            padding: 5px;
+            padding-left: 8px;
+        }
+        .tick-btn,.del-btn{
+            background-color: aquamarine;
+            color: white;
+            font-size: 25px;
+            padding: 5px;
+            outline: none;
+            border: none;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .del-btn{
+            background-color: crimson;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+        .fa-check,.fa-trash{
+            pointer-events: none;
+        }
+        .completed{
+            text-decoration: line-through;
+            opacity: .5;
+        }
+    </style>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+
+
+<div class="box1">
+    <h1 class="heading">ToDo-List</h1>
+    <form>
+        <input type="text" class="text">
+        <button class="addbtn"><i class="fas fa-plus-square"></i></button>
+    </form>
+</div>
+<div class="container">
+    <ul class="todolist">
+
+    </ul>
+</div>
+<script>
+
+
+    var inputtext = document.querySelector(".text");
+    var addbtn = document.querySelector(".addbtn");
+    var list = document.querySelector(".todolist");
+    addbtn.onclick = create;
+    list.onclick = chkdel;
+    function create(e){
+        if(inputtext.value != ""){
+            e.preventDefault();
+
+            var newdiv = document.createElement("div");
+            newdiv.classList.add("todo");
+
+            var newli = document.createElement("li");
+            newli.classList.add("todo-li");
+            newli.innerHTML=inputtext.value;
+            newdiv.appendChild(newli);
+
+            var tickbtn = document.createElement("button");
+            tickbtn.classList.add("tick-btn");
+            tickbtn.innerHTML='<i class="fas fa-check"></i>';
+            newdiv.appendChild(tickbtn);
+
+            var delbtn = document.createElement("button");
+            delbtn.classList.add("del-btn");
+            delbtn.innerHTML='<i class="fas fa-trash"></i>';
+            newdiv.appendChild(delbtn);
+
+            list.appendChild(newdiv);
+            inputtext.value = "";
+        }
+        else{
+            alert("Provide Some Text")
+        }
+
+    }
+    function chkdel(e){
+        var item = e.target;
+        if(item.classList[0] === "del-btn"){
+            var parent = item.parentNode;
+            parent.remove();
+        }
+        if(item.classList[0] === "tick-btn"){
+            var parent = item.parentNode;
+            parent.classList.toggle("completed");
+        }
+    }
+</script>
+</body>
+</html>
