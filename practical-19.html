@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS MultiPage Form</title>
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: rgb(73, 72, 72);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 360px;
+            height: 420px;
+            background-color: #fff;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container form {
+            width: 280px;
+            position: absolute;
+            left: 40px;
+            top: 80px;
+            transition: 0.5s;
+        }
+
+        form h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #777;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px 5px;
+            margin: 5px 0px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #777;
+            background: transparent;
+        }
+
+        .btn-box {
+            margin-top: 70px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        form button {
+            width: 120px;
+            height: 35px;
+            background-color: rgb(13, 173, 173);
+            color: white;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+
+        #form2 {
+            left: 450px;
+        }
+
+        #form3 {
+            left: 450px;
+        }
+
+        .step-row {
+            width: 360px;
+            height: 40px;
+            box-shadow: 0px -1px 5px -1px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .step-col {
+            width: 120px;
+            text-align: center;
+            color: #000;
+            z-index: 1;
+        }
+
+        #progress {
+            width: 120px;
+            height: 100%;
+            position: absolute;
+            background-color: rgb(13, 173, 173);
+            transition: 1s;
+        }
+
+        #progress::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            right: -20px;
+            border-left: 20px solid rgb(13, 173, 173);
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <form id="form1">
+        <h3>CREATE ACCOUNT</h3>
+        <input type="text" placeholder="Enter Email">
+        <input type="text" placeholder="Enter Password">
+        <input type="text" placeholder="Confirm Password">
+        <div class="btn-box">
+            <button type="button" id="next1">Next</button>
+        </div>
+    </form>
+
+    <form id="form2">
+        <h3>SOCIAL LINKS</h3>
+        <input type="text" placeholder="Linkdin">
+        <input type="text" placeholder="Github">
+        <input type="text" placeholder="Facebook">
+        <div class="btn-box">
+            <button type="button" id="back1">Back</button>
+            <button type="button" id="next2">Next</button>
+        </div>
+    </form>
+
+    <form id="form3">
+        <h3>PERSONAL INFORMATION</h3>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Mobile No.">
+        <div class="btn-box">
+            <button type="button" id="back2">Back</button>
+            <button type="button">Submit</button>
+        </div>
+    </form>
+
+    <div class="step-row">
+        <div id="progress"></div>
+        <div class="step-col"><small>Step-1</small></div>
+        <div class="step-col"><small>Step-2</small></div>
+        <div class="step-col"><small>Step-3</small></div>
+    </div>
+
+
+</div>
+</div>
+<script>
+    const form1 = document.getElementById('form1');
+    const form2 = document.getElementById('form2');
+    const form3 = document.getElementById('form3');
+
+    const next1 = document.getElementById('next1');
+    const next2 = document.getElementById('next2');
+    const back1 = document.getElementById('back1');
+    const back2 = document.getElementById('back2');
+
+    const progress = document.getElementById('progress');
+
+    next1.onclick = function () {
+        form1.style.left = '-450px';
+        form2.style.left = '40px';
+        progress.style.width = '240px';
+    }
+
+    back1.onclick = function () {
+        form1.style.left = '40px';
+        form2.style.left = '450px';
+        progress.style.width = '120px';
+    }
+
+    next2.onclick = function () {
+        form2.style.left = '-450px';
+        form3.style.left = '40px';
+        progress.style.width = '360px';
+    }
+
+    back2.onclick = function () {
+        form2.style.left = '40px';
+        form3.style.left = '450px';
+        progress.style.width = '240px';
+    }
+</script>
+</body>
+
+</html>
