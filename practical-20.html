@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Bootstrap Grid</title>
+    <style>
+        .row {
+            margin-bottom: 15px;
+        }
+
+        .top {
+            min-height: 90px;
+        }
+
+        .bottom {
+            min-height: 60px;
+        }
+
+        .left {
+            min-height: 300px;
+        }
+
+        .right-top {
+            min-height: 140px;
+        }
+
+        .right-bottom {
+            min-height: 145px;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container mt-3">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="top bg-info"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="left bg-warning"></div>
+        </div>
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="right-top bg-primary"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="right-bottom bg-danger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bottom bg-dark"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
